@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Temperature" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Calculator!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luI-wn-NRy">
+                                <rect key="frame" x="203" y="48" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter temperature in F" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j1x-qO-twS">
+                                <rect key="frame" x="213" y="77" width="174" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="VPq-4N-qfH"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Celsius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcF-mw-Sqe">
+                                <rect key="frame" x="272" y="236" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfY-Lg-Oje">
+                                <rect key="frame" x="237" y="115" width="126" height="30"/>
+                                <state key="normal" title="Convert to Celsius"/>
+                                <connections>
+                                    <action selector="convert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="14z-9b-e3H"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converted temperature is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Em-Fq-jfT">
+                                <rect key="frame" x="200" y="177" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3f-Sx-Pmf">
+                                <rect key="frame" x="281" y="305" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4U-D3-iFU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter a temperature above" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kth-2G-3R7">
+                                <rect key="frame" x="171" y="265" width="258" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qz-wT-oCn">
+                                <rect key="frame" x="0.0" y="212" width="600" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Nbz-lp-jgI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j1x-qO-twS" firstAttribute="centerX" secondItem="tfY-Lg-Oje" secondAttribute="centerX" id="2Vu-pK-62K"/>
+                            <constraint firstItem="7Qz-wT-oCn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="192" id="3vC-5s-zfP"/>
+                            <constraint firstItem="0Em-Fq-jfT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="157" id="D2y-DH-3p1"/>
+                            <constraint firstItem="luI-wn-NRy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="F50-Pd-yjZ"/>
+                            <constraint firstItem="luI-wn-NRy" firstAttribute="leading" secondItem="j1x-qO-twS" secondAttribute="leading" constant="-10" id="HU0-Ba-vj8"/>
+                            <constraint firstItem="ZcF-mw-Sqe" firstAttribute="centerX" secondItem="Kth-2G-3R7" secondAttribute="centerX" id="Hem-lI-pOd"/>
+                            <constraint firstItem="7Qz-wT-oCn" firstAttribute="centerX" secondItem="ZcF-mw-Sqe" secondAttribute="centerX" id="KCI-be-cgE"/>
+                            <constraint firstItem="j1x-qO-twS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="M6C-S1-q8f"/>
+                            <constraint firstItem="0Em-Fq-jfT" firstAttribute="centerX" secondItem="7Qz-wT-oCn" secondAttribute="centerX" constant="0.5" id="P8O-WQ-aes"/>
+                            <constraint firstItem="tfY-Lg-Oje" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="95" id="U3F-84-qR6"/>
+                            <constraint firstItem="ZcF-mw-Sqe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="216" id="bui-Th-WBr"/>
+                            <constraint firstItem="Kth-2G-3R7" firstAttribute="centerX" secondItem="T3f-Sx-Pmf" secondAttribute="centerX" id="c4S-UG-Okd"/>
+                            <constraint firstItem="Kth-2G-3R7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="245" id="dPR-6K-nqE"/>
+                            <constraint firstItem="luI-wn-NRy" firstAttribute="trailing" secondItem="j1x-qO-twS" secondAttribute="trailing" constant="11" id="gF2-lM-A5U"/>
+                            <constraint firstItem="ZcF-mw-Sqe" firstAttribute="top" secondItem="7Qz-wT-oCn" secondAttribute="bottom" constant="3" id="tXS-CS-9db"/>
+                            <constraint firstItem="tfY-Lg-Oje" firstAttribute="centerX" secondItem="0Em-Fq-jfT" secondAttribute="centerX" id="uZw-63-rlD"/>
+                            <constraint firstItem="T3f-Sx-Pmf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="285" id="wLr-hp-4PC"/>
+                            <constraint firstItem="luI-wn-NRy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yOH-Wz-tHa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Kth-2G-3R7" id="RRF-fb-8zL"/>
+                        <outlet property="tempLabel" destination="7Qz-wT-oCn" id="JvW-nL-ltk"/>
+                        <outlet property="tempTextField" destination="j1x-qO-twS" id="Vcj-rA-9Su"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="429"/>
+        </scene>
+    </scenes>
+</document>
