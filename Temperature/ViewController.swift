@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     @IBAction func convert(sender: AnyObject) {
         // Convert the entered value if it is not nil
         if let tempF = Double(tempTextField.text!) {
-            let tempC = (tempF-32)*(5/8)
+            let tempC = (tempF-32)*(5/9)
             tempLabel.text = String(tempC)
             
             if tempF > 100 {
