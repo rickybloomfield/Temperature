@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
     // MARK: Actions
     // Method to convert the temperature from Fahrenheit to Celsius
-    @IBAction func convert(sender: AnyObject) {
+    @IBAction func convert(_ sender: AnyObject) {
         // Convert the entered value if it is not nil
         if let tempF = Double(tempTextField.text!) {
             let tempC = (tempF-32)*(5/9)
@@ -35,13 +35,13 @@ class ViewController: UIViewController {
             
             if tempF > 100 {
                 descriptionLabel.text = "Better Hydrate!"
-                descriptionLabel.textColor = UIColor.redColor()
+                descriptionLabel.textColor = UIColor.red
             } else if tempF < 32 {
                 descriptionLabel.text = "Brr! Pack the Long Johns!"
-                descriptionLabel.textColor = UIColor.blueColor()
+                descriptionLabel.textColor = UIColor.blue
             } else {
                 descriptionLabel.text = "That's a reasonable temperature!"
-                descriptionLabel.textColor = UIColor.blackColor()
+                descriptionLabel.textColor = UIColor.black
             }
         }
         
@@ -53,27 +53,27 @@ class ViewController: UIViewController {
         // If value is not a valid number, reset the UI and display an alert to inform the user
         else {
             reset(sender)
-            let alertController = UIAlertController(title: "Not a Valid Number", message: "Please enter a valid number.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Not a Valid Number", message: "Please enter a valid number.", preferredStyle: .alert)
             
-            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action:UIAlertAction!) in
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction!) in
             }
             alertController.addAction(OKAction)
             
-            self.presentViewController(alertController, animated: true, completion:nil)
+            self.present(alertController, animated: true, completion:nil)
         }
     }
     
     // Convevience method to call the "convert" method each time the UITextField text changes
-    @IBAction func textChanged(sender: AnyObject) {
+    @IBAction func textChanged(_ sender: AnyObject) {
         convert(sender)
     }
     
     // Method to reset the interface to the default state
-    @IBAction func reset(sender: AnyObject) {
+    @IBAction func reset(_ sender: AnyObject) {
         tempTextField.text = nil
         tempLabel.text = nil
         descriptionLabel.text = "Please enter a temperature above"
-        descriptionLabel.textColor = UIColor.blackColor()
+        descriptionLabel.textColor = UIColor.black
     }
 }
 
